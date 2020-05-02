@@ -38,7 +38,7 @@ def main():
     weather = get_weather(api_key, location)
  
     #print(weather['main']['temp'])
-    print(weather)
+    #print(weather)
 
     client = InfluxDBClient('localhost', 8086, 'root', 'root', 'WEATHER')
     client.write_points(get_body(weather))
